@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITLE -->
+    <title>BOOKMARK</title>
+    <link
+      rel="shortcut icon"
+      href="images/icons8-bookmark.svg"
+      type="image/x-icon"
+    />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="d-flex justify-content-center m-5 p-2">
+        <h1 class="display-5 text-center">Bookmarker</h1>
+      </div>
+      <div class="border-dotted mb-5 p-4">
+        <h2 class="mb-4 text-center">
+          <i class="fa-solid fa-bookmark"></i>
+          <span> Bookmark your favorite sites </span>
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <div class="mx-2 my-3">
+          <label for="bookmarkName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+          <input type="name" class="form-control" id="bookmarkName" placeholder="Bookmark Name" onkeyup="nameValidation()">
+        </div>
+
+        <div class="mx-2 my-3">
+          <label for="websiteURL" class="form-label fw-bold "><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+          <input type="name" class="form-control" id="websiteURL" placeholder="Site URL" onkeyup="URLValidation()">
+        </div>
+              <button id="submit" onclick="addURL()" class="btn px-5 mx-auto d-block border border-1">Submit</button>
+
+      </div>
+
+
+
+    </section>
+    <section id="table">
+      <table class="table container p-5">
+        <thead>
+          <tr class="text-center">
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="data"></tbody>
+
+      </table>
+    </section>
+<section >
+  <div class="offcanvas offcanvas-start start-50 top-50 translate-middle border border-0 rounded-5 p-3" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    
+    <div class="offcanvas-header">
+    
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onclick="closeOffcanvas()"></button>
+    </div>
+    <div class="p-1">
+      <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">Site Name or Url is not valid, Please follow the rules below :</h5>
+ <ul class="list-unstyled pt-4">
+  <li><i class="fa-regular fa-circle-right p-2"></i>
+    Site name must contain at least 3 characters</li>
+<li> <i class="fa-regular fa-circle-right p-2"></i> Site URL must be a valid one</li>
+</ul>
+
+    </div>
+  </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+body{
+    background-color: #f7ecde;
+    color: #352e28;
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    border-bottom: 1px solid #fec260;
+}
+h1::after{
+    content: "";
+    width: 100%;
+    height: 40%;
+    background-color: #fec260;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+    transition: all 0.5s;
+}
+h1:hover::after{
+    height: 60%;
+}
+.border-dotted{
+    border-top: 2.5px dotted #352e28;
+    border-bottom: 2.5px dotted #352e28;
+
+
+}
+h2{
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+        font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+
+#submit{
+ background-color: #d1512d;
+ color: #f7ecde;  
+ border-color: #bb4120 !important; 
+}
+#submit:hover{
+    background-color: #bb4120;
+}
+#submit:active  {
+    background-color: transparent;
+    border-color: #212529 !important; 
+color:#212529 ;
+}
+#visit{
+ background-color: #9eb23b;
+ color: #f7ecde;  
+ border-color: #6e8018 !important; 
+}
+#visit:hover{
+    background-color: #8a9e23;
+}
+#visit:active #visit a{
+    background-color: transparent;
+    border-color: #212529 !important; 
+color:#212529 ;
+}
+a{
+    color: #f7ecde;
+}
+a:active #visit a{
+    color: #212529;
+    background-color: transparent;
+}
+#delete{
+ background-color: #eb1d36;
+ color: #f7ecde;  
+ border-color: #ba081d !important; 
+}
+#delete:hover{
+    background-color: #d30820;
+}
+#delete:focus{
+    background-color: transparent;
+    border-color: #212529 !important; 
+color:#212529 ;
+}
+
+li > i{
+color:#ba081d ;
+}
+.btn-close:focus{
+    box-shadow: 0 0 0 0.25rem #fec26055;
+
+}
